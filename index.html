@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"
+      defer
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>mySchoool - Signup Form</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="image-container">
+        <img
+          src="./moren-hsu-VLaKsTkmVhk-unsplash.jpg"
+          alt="background_image"
+          id="display_image"
+        />
+
+        <h1 class="centered-title">
+          <!-- <span> <box-icon name="book-open" class="bx-lg"></box-icon></span> -->
+          mySchoool
+        </h1>
+
+        <div class="attribution-container">
+          Photo by
+          <a
+            href="https://unsplash.com/@moren?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >moren hsu</a
+          >
+          on
+          <a
+            href="https://unsplash.com/photos/VLaKsTkmVhk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </div>
+      </div>
+
+      <div class="form-container">
+        <div class="copy-text-container">
+          <h1>Welcome to <span>mySchoool</span> sign up form.</h1>
+          <h3>
+            To sign up, please enter your personal information and contact
+            details.
+          </h3>
+          <h3 class="prevent-select">
+            Once you have submitted the form, you will be contacted by a school
+            administrator to complete the enrollment process.
+          </h3>
+        </div>
+
+        <form id="myForm" method="post">
+          <div class="left-inputs">
+            <label for="name">FIRST NAME</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Pedro"
+              name="name"
+              title="This field is required."
+              required
+            />
+
+            <label for="email">EMAIL</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@email.com"
+              title="This field is required."
+              required
+            />
+
+            <label for="password">PASSWORD</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              minlength="8"
+              title="This field is required."
+              required
+            />
+          </div>
+
+          <div class="right-inputs">
+            <label for="last-name">LAST NAME:</label>
+            <input
+              type="text"
+              id="last-name"
+              placeholder="Cuesta"
+              name="last-name"
+              title="This field is required."
+              required
+            />
+
+            <label for="phone-number">PHONE NUMBER</label>
+            <input
+              type="tel"
+              id="phone-number"
+              placeholder="809-664-2222"
+              name="phone-number"
+              title="This field is required."
+              required
+            />
+
+            <label for="confirm-password">CONFIRM PASSWORD</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              required
+              minlength="8"
+              title="This field is required."
+              required
+            />
+            <p id="pass-error-message" class="hidden">
+              The passwords you entered do not match. Please try again.
+            </p>
+          </div>
+          <!-- <input type="submit" value="Enviar" id="enviar" class="boton" /> -->
+        </form>
+        <div class="button-container">
+          <button form="myForm" id="create-account-button" type="submit">
+            Create Account
+          </button>
+          <!-- <input type="submit" value="Enviar" id="enviar" class="boton" /> -->
+          <p>Already have an account? <a href="">Log in</a></p>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

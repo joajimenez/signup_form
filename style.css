@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Poppins&display=swap');
+
+:root {
+  --focus-color: #b8c9ec;
+  --error-color: #ee1f1f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  background-color: rgba(209, 207, 207, 0.384);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.image-container {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.centered-title {
+  font-family: 'Borel', serif;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(245, 245, 220, 0.26);
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.attribution-container {
+  position: absolute;
+  bottom: 8px;
+  right: -2px;
+  background-color: rgba(245, 245, 220, 0.26);
+  width: 100%;
+}
+.copy-text-container {
+  padding: 1rem;
+}
+
+.copy-text {
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 1rem;
+  max-width: 50ch;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.form-container {
+  width: 60%;
+}
+
+.form-container form {
+  display: flex;
+  width: 100%;
+  /* padding: 2rem; */
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.left-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  /* font-size: 1rem; */
+  font-weight: bold;
+}
+
+form input {
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+  width: 100%;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+input:focus {
+  box-shadow: 4px 4px 4px var(--focus-color);
+}
+
+.button-container {
+  padding: 1rem;
+}
+
+#create-account-button {
+  padding: 0.8rem 3rem;
+  color: #fff;
+  background-color: #954022;
+  font-weight: 600;
+  font-size: larger;
+  border-radius: 0.4rem;
+}
+
+#create-account-button:hover {
+  background-color: #c4562e;
+  cursor: pointer;
+}
+
+#pass-error-message {
+  font-weight: bold;
+  color: #ee1f1f;
+}
+
+.error {
+  border: 1px solid var(--error-color);
+}
+
+.success-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 428px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 40%;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
